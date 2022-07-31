@@ -1,7 +1,7 @@
 #include <iostream>
 #include<stack>
 using namespace std;
-
+ 
 void insAtBottom(stack<int>& st,int topelement)
 {
 	if(st.empty())
@@ -40,7 +40,12 @@ int main()
 	st.push(5);
 	st.push(6);
 
+
+	//Before reversing, if we print original stack then it will print-> 6 5 4 3 2 1 (because top is at 6)
+	//But after reversing, if we print original stack then it will print-> 1 2 3 4 5 6	(because now, top is at 1)
 	reverse(st);
+
+	cout<<"After Reversing: "<<endl;
 	while (!st.empty())
 	{
 		cout<<st.top()<<" ";
